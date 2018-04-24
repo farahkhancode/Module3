@@ -1,0 +1,161 @@
+Q: In your own words, describe what clean code is and why it is important.
+
+A:  Clean code is created by using techniques that simplify, prevent repetition, make reusable blocks of code, and keep your code organized. This is important because if developers need to look at it, or even if you, yourself, need to go back and change something, items can be easily accessed and parts can be changed without affecting other code too much that is unrelated to the functions/variables/methods you want to alter.
+
+
+2. Q:  Think about another commonly used object that relies on computers and explain what would happen is code was not created to an acceptable standard.
+
+One example could be machinery used in factories that is programmed to do something or work in synchrony with other machines. Malfunction here can cause a loss in production, possible injury to workers, or damage to machinery.
+
+
+
+3. Q: Would you consider the following to be clean code? Explain why or why not. If not, refactor the code.
+
+//EXTRACT Functions to make it clean
+FUNCTION fToC
+SET z to (x−32) * (5/9)       
+ PRINT z       
+
+FUNCTION cToF
+ SET z to x * 1.8000 + 32.00  
+ PRINT z   
+
+
+FUNCTION do(x, y)              
+ IF y = "F" THEN              
+ CALL FUNCTION fToC           
+ ELSE IF y = "C" THEN        
+CALL FUNCTION cToF                      
+ END IF
+END FUNCTION
+
+
+
+4. Clean code? This is already clean code because there is nothing more we can do to simplify it
+
+FUNCTION calcPercent(sum, total)
+ IF NOT(total = 0) THEN
+     SET percentage to sum / total * 100
+ ELSE
+   PRINT "Sorry, cannot divide by 0"
+ END IF
+
+ PRINT percentage
+END FUNCTION
+
+
+
+
+5. A
+
+
+//EXTRACT FUNCTION
+FUNCTION getPayment
+ CALL RETURNING AMOUNT
+ IF paymentType = 'CASH' THEN
+PRINT "Change due: " + amount - subTotal * discountRate + (subTotal * tax)
+ ELSE IF paymentType = 'CREDIT CARD' THEN
+ PRINT "Your credit card has been charged: " + subTotal * discountRate + (subTotal * tax)
+
+ END IF
+END FUNCTION
+
+FUNCTION checkOutCustomer(subTotal, discountRate, paymentType)
+   PRINT "Your total due is: " + subTotal * discountRate + (subTotal * tax)
+   CALL FUNCTION getPayment
+  
+End FUNCTION
+
+
+
+5.B
+
+
+FUNCTION checkoutBook(book, guest)
+ IF guest.accountActive THEN
+    FUNCTION checkOutBook    
+ ELSE
+     PRINT "Unable to check out book."
+ END IF
+END FUNCTION
+
+
+FUNCTION checkOutBook
+ IF NOT(guest.hasOverdueBooks) AND  guest.outstandingFees = 0 THEN
+           APPEND book to guest.books
+           SET book.status to "Checked Out"
+           PRINT "Your books have been issued."
+
+
+
+
+5.C
+
+CLASS AccountInfo
+
+ FUNCTION displayBalance
+    PRINT balance
+ END FUNCTION
+
+CLASS AccountActions
+
+ FUNCTION deposit(amount)
+    SET balance to balance + amount
+ END FUNCTION
+
+ FUNCTION withdraw(amount)
+     IF balance > amount THEN
+       SET balance to balance - amount
+     END
+ END FUNCTION
+
+CLASS extendOffers
+
+ FUNCTION creditCardOffer
+     IF NOT(customer.hasCreditCard) THEN
+         CALL offerCreditCard
+     END
+ END FUNCTION
+
+ FUNCTION checkStatus
+     IF NOT(customer.hasCheckingAccount) THEN
+         CALL offerCheckingAccount
+     END
+ END FUNCTION
+
+ ....
+ ....
+ ....
+
+END
+
+
+6.
+
+function checkSqRoot(arr){
+  arr2 = arr.reduce((a,b)=>a+b);
+  sqrt=Math.sqrt(arr2);
+ 
+  if (Number.isInteger(sqrt)){
+    return sqrt;
+  }else {
+    return arr2;
+  }
+}
+
+
+7.function hasDuplicates(arr){
+  for(var i=0;i<arr.length;i++){
+    for(var j=i; j<arr.length;j++){
+      if(i!=j && arr[i]===arr[j]){
+         return true
+      }
+    }
+      return false
+  }
+}
+
+
+8.
+
+
