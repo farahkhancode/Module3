@@ -1,0 +1,60 @@
+1. Why do programmers use pseudocode?
+Answer: Pseudocode is used to help programmers plan out their code before  writing it in programming language. It is a way to organize parts and brainstorm  prior to writing the code that the computer will read.
+
+
+2. If you run pseudocode what would happen?
+Answer: You would probably get an error message because computers cannot read pseudocode.
+
+
+
+PROGRAMMING ASSIGNMENT
+
+
+1. INPUT first number
+   INPUT second number
+   Call the reduce method with Math.max and store the result in largest
+   return largest
+
+
+
+2.SET number to 100
+  WHILE number is less that or equal to 100 and greater than 0
+  PRINT number
+  decrement number by 1
+  ENDWHILE
+
+
+3. SET string to entry 
+   SET array to phonebook
+ START FUNCTION and use entry and phonebook as parameters
+ FOR beginning to length of phonebook check each next item
+    IF phonebook includes entry
+       Call the includes method on phonebook with entry as parameter
+  return true
+    END IF
+       ELSE return false
+       END ELSE
+ END FOR
+ END FUNCTION
+
+4.  IMPLEMENT INTO CODE
+
+
+    str = "farah"
+    phonebook =["farah", "mina", "john"]
+ 
+ 
+ 
+ function isInPhonebook(str, phonebook){
+ for(var i=0; i<phonebook.length; i++){
+   if (phonebook.includes(str)){
+     return true;
+   }else{
+     return false;
+   } 
+ }
+ }
+ 
+ isInPhonebook(str,phonebook);
+
+    
