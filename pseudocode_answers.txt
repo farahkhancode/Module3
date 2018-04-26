@@ -12,15 +12,15 @@ PROGRAMMING ASSIGNMENT
 
 1. INPUT first number
    INPUT second number
-   Call the reduce method with Math.max and store the result in largest
+   Call the reduce method and reduce the array to the largest value and store the result in largest
    return largest
 
 
 
-2.SET number to 100
+2.SET number to 1
   WHILE number is less that or equal to 100 and greater than 0
   PRINT number
-  decrement number by 1
+  increment number by 1
   ENDWHILE
 
 
