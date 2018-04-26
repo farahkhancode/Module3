@@ -1,0 +1,61 @@
+
+
+
+1. What s the main difference between stack and queue?
+
+>A: Queue data structure arranges elements in FIFO(First In First Out) priority while stack data structure arranges elements in LIFO(Last In First Out) priority.
+
+
+2. What are the similarities between stack and queues?
+
+>A:They are both data structures that and operate in a linear fashion where data can be arranges from the first or last element, not in between.
+
+
+3.Which data structures would you use for implementing UNDO and REDO?
+
+>A: UNDO  would use the stack data structure as you want the last action to be the first to go(LIFO). REDO would also use stack because you would want the last action to be repeated(LIFO).
+
+
+
+Progamming Questions
+ 1. Reverse string using stack.
+
+ FUNCTION REVERSE(original)
+  INIT a new stack
+  FOR each character in original
+    CALL stack.push WITH character
+  END FOR
+  INIT reversed to empty string
+  WHILE stack is not empty
+    CALL stack.pop RETURNING character
+    APPEND character to reversed
+  END WHILE
+  RETURN reversed
+END FUNCTION
+
+
+2.
+
+CLASS Stack
+ FUNCTION pop(queue)
+   FOR each item in original except for last
+     APPEND item to the end of the list
+   END FOR
+   DELETE and RETURN last item
+ END FUNCTION
+END CLASS
+
+
+
+
+3.CLASS QUEUE
+ FUNCTION enqueue(element)
+  APPEND element to the end of the list
+ END FUNCTION
+
+ FUNCTION dequeue
+  SET temp to the first element
+  REMOVE FIRST element of list from list
+  RETURN temp
+ END FUNCTION
+END CLASS
