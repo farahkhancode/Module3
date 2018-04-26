@@ -20,6 +20,57 @@
  //Patrick leaves
  
 
+
+class Line {
+  constructor(name){
+    this.names = ["Vivian", "Ava", "Josh", "Patrick", "Mike"];
+  }
+  
+  findPerson(name){
+   for (var i = 0; i <=this.names.length; i++){
+     if(this.names[i]=== name){
+       console.log( name + " is at index " + i);
+     }
+      console.log(name + " is not here");
+       
+   }
+  }
+  
+  cutLine(name){
+    this.names.splice(1,0,name);
+    
+  }
+  
+  
+  leaveLine(name){
+    const index = this.names.indexOf(name);
+    if(index !== name){
+    this.names.splice(index,1);
+  }
+  console.log(this.names);
+  }
+  
+  
+}
+
+let line = new Line();
+
+
+console.log(line);
+ 
+line.findPerson("Josh");
+ 
+line.findPerson("Emily"); 
+
+line.cutLine("Melissa");
+console.log(line);
+
+line.leaveLine("Patrick");
+console.log( line);
+
+
+
+
 2.A large data structure can be used to keep a list of the top-performing students in a university.
 
 
