@@ -15,10 +15,10 @@ class Line {
   findPerson(name){
    for (var i = 0; i < this.names.length; i++){
      if(this.names[i] === name){
-       console.log(name + " is at index " + i);
+       return name + " is at index " + i;
      }
    }
-   console.log(name + " is not here");
+   return name + " is not here";
   }
   
   cutLine(name, friend){
@@ -30,9 +30,7 @@ class Line {
   
   leaveLine(name){
     const index = this.names.indexOf(name);
-    if(index !== name){
     this.names.splice(index,1);
-   }
   }
   
   
@@ -50,14 +48,14 @@ console.log(line);
  
 line.findPerson("Josh");
 line.findPerson("Emily"); 
+console.log(line.findPerson("Josh"))
+console.log(line.findPerson("Emily"))
 
 line.cutLine("Melissa", "Ava");
 console.log(line);
 
 line.leaveLine("Patrick");
 console.log( line);
-
-
 
 
 
