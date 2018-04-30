@@ -1,9 +1,9 @@
 1. What are some Pros and cons of using linked lists instead of arrays?
 
-PROS: Each node is independent in memory, so OS may use available memory location to store it. Mode memory independence allows linked list to grow to immense sizes. Large arrays or inserting new elements into an array require OS to rearrange physical memory space to make room for them, which is expensive.
+PROS: Each node in a linked list is independent in memory, and more memory independence allows linked lists to grow to immense sizes.  Large arrays or inserting new elements into an array require OS to rearrange physical memory space to make room for them, which is expensive.
 
 
-CONS: Since data is not stored contiguously, it can be inefficient to access an element within the list. Arrays are indexed, so accessing desired element is easier.
+CONS: Since data is not stored contiguously, it can be inefficient to access an element within the list(takes longer). Arrays are indexed, so accessing desired element is easier.
 
 2.Come up with a real world example of a linked list.
 
