@@ -3,29 +3,36 @@
 1. 
 class Line {
   constructor(name){
-    this.names = ["Vivian", "Ava", "Josh", "Patrick", "Mike"];
+    this.names = [];
+  }
+ 
+ 
+  addPerson(name){
+    this.names.push(name);
   }
   
+ 
   findPerson(name){
-   for (var i = 0; i <=this.names.length; i++){
-     if(this.names[i]=== name){
-       console.log( name + " is at index " + i);
+   for (var i = 0; i < this.names.length; i++){
+     if(this.names[i] === name){
+       console.log(name + " is at index " + i);
      }
-      console.log (name + " is not here");
-     
-     
    }
+   console.log(name + " is not here");
   }
   
-  cutLine(name){
-    this.names.splice(1,0,name);
+  cutLine(name, friend){
+    var friendIndex= this.names.indexOf(friend);
+    this.names.splice(friendIndex,0,name);
     
   }
   
   
   leaveLine(name){
     const index = this.names.indexOf(name);
+    if(index !== name){
     this.names.splice(index,1);
+   }
   }
   
   
@@ -33,18 +40,25 @@ class Line {
 
 let line = new Line();
 
+line.addPerson("Vivian");
+line.addPerson("Ava");
+line.addPerson("Josh");
+line.addPerson("Patrick");
+line.addPerson("Mike");
 
 console.log(line);
  
 line.findPerson("Josh");
- 
 line.findPerson("Emily"); 
 
-line.cutLine("Melissa");
+line.cutLine("Melissa", "Ava");
 console.log(line);
 
 line.leaveLine("Patrick");
-console.log(line);
+console.log( line);
+
+
+
 
 
 
