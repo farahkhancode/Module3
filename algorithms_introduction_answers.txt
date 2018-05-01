@@ -1,0 +1,84 @@
+Questions:
+
+
+
+1.Using proper pseudo-code, describe the following primitive algorithms:
+
+Making coffee:
+
+
+FUNCTION
+For water in kettle, INCREMENT water until kettle is equal to 1 cup THEN
+  IF water in kettle is equal to 1 cup, SET kettle to TRUE THEN
+    WHILE kettle is true, INCREMENT temp to 100 degrees C.
+    END WHILE
+  END IF 
+END FOR
+
+IF temp is equal to 100 degrees C THEN 
+   cup + coffee + water + sugar
+   stir
+END IF
+
+END FUNCTION
+
+
+
+Washing dishes:
+
+
+IF Dishes in sink greater than 0
+  SET dirtyDishes to true
+ ELSE SET dirtyDishes to false
+
+
+FUNCTION
+ IF dirtyDishes is false
+    PRINT "No dishes to wash"
+ END IF
+   ELSEIF dirtyDishes is true
+      add soap and water to sink, scrub dishes, remove dishes from sink
+   END ELSE IF
+
+END FUNCTION
+
+
+
+
+Sorting laundry:
+
+
+IF laundryItems greater than 0
+  SET laundryItems to true
+ ELSE SET laundryItems to false
+
+FUNCTION
+ IF laundryItems is false
+    PRINT "No laundry to fold"
+ END IF
+   ELSEIF laundryItems is true
+      sort laundryItems, fold laundryItems, store laundryItems
+   END ELSE IF
+
+END FUNCTION
+
+
+
+
+2. As with the knot algorithm, there may be more than one way to solve the problem. It is essential to try to pick the best algorithm for a situation. Name three companies who created an algorithm that made them successful, e.g., Google's search algorithm. It doesn't need to be a tech example (such as a recipe or manufacturing a product). Google's algorithm produces more relevant results than other search engines; what about each of your cases make them stand out?
+
+Facebook has algorithms to show you relevant adds suited to your interests based on searches you perform.
+
+Tile uses algorithms and is a product that you stick on important items and it helps track things you lost by sending a signal to your phone.
+
+Amazon Echo uses algorithms and allows you to ask many things without having to pull out your phone.
+
+3.Hypothesize about what constitutes an efficient algorithm versus an inefficient algorithm.
+
+An efficient algorithm takes logical steps towards completing a task in an efficient manner and in a finite amount of time.
+
+
+
+
+
+
