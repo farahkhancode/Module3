@@ -1,0 +1,103 @@
+
+**Questions**
+>1. What are some Pros and cons of using linked lists instead of arrays?
+
+PROS: Each node in a linked list is independent in memory, and more memory independence allows linked lists to grow to immense sizes.  Large arrays or inserting new elements into an array require OS to rearrange physical memory space to make room for them, which is expensive.
+
+
+CONS: Since data is not stored contiguously, it can be inefficient to access an element within the list(takes longer). Arrays are indexed, so accessing desired element is easier.
+
+>2.Come up with a real world example of a linked list.
+
+Driving to different gas stations to see if they have your favorite ice cream.
+
+
+**Programming questions**
+
+
+>1. Fix the bug/code.
+
+```
+LinkedList.prototype.push = function(element) {
+ var node = new Node(element);
+ currentNode = head;
+
+ if(!head){
+   head = node
+ } else{
+   currentNode = head;  
+ }
+  currentNode.next = node;
+}
+
+```
+
+>2. Remove all duplicated from the linked list.
+
+Input: a -> c -> d -> d -> a
+Output: a -> c -> d
+
+```
+function LinkedList() {
+  this.head = null;
+}
+
+LinkedList.prototype.removeDuplicates = function() {
+  // Empty or a single element Linked List
+  if (!this.head || !this.head.next) {
+    console.log('No duplicates were found. Empty or a single element Linked List.');
+    return;
+  }
+
+  var p1;
+  var p2;
+  var p3;
+  var val;
+  p2 = this.head;
+
+  while (p2) {
+    val = p2.data;
+    p1 = p2;
+    p3 = p1.next;
+
+    while (p3) {
+      if (p3.data === val) {
+          p1.next = p3.next;
+      } else {
+        p1 = p3;
+      }
+      p3 = p3.next;
+    }
+
+    p2 = p2.next;
+  }
+};
+
+```
+
+
+
+>3. Reverse it.
+
+Input: a -> b -> c -> d
+Output: d -> c -> b -> a
+
+
+```
+LinkedList.prototype.reverse = function(){
+  currentNode = this.head;
+  nextNode = currentNode.next;
+
+while(nextNode) {
+  var temporary = nextNode.next;
+  nextNode.next = currentNode;
+  currentNode = nextNode;
+  nextNode = temporary;
+}
+
+this.head.next = null;
+this.head = currentNode;
+};
+```
+
+
