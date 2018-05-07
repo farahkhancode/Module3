@@ -1,0 +1,79 @@
+
+Questions
+
+
+1.What is a real-life scenario that uses linear search?
+A:   A n example of a linear or sequential search is if you have a stack of unsorted books and you check each cover to see if its the one you are looking for.
+
+
+2.What is a real-life scenario that uses binary search?
+A:   A real life scenario of a binary search is when we use a dictionary. You can start by opening the dictionary in the middle and eliminating sides to get to your definition based on he spelling of the word
+
+
+
+3.Given the alphabetically sorted collection in this checkpoint, how many iterations would it take to find the value G using linear search?
+
+A:  7 iterations
+
+
+
+4.Given the alphabetically sorted collection in this checkpoint, how many iterations would it take to find the value G using binary search?
+
+A: 3 iterations
+
+
+5.Given an unsorted collection of a million items, which algorithm would you choose between linear search and binary search? Explain your reasoning.
+
+A: If it is unsorted, a linear search would be the best method since you have to check each one as there is no order.
+
+
+
+6.Given a sorted collection of a million items, which algorithm would you choose between linear search and binary search? Explain your reasoning.
+
+A: If the items are sorted, I would use a binary search since I we can estimate where the item to be found lies by dividing the collection and checking if the item is larges or smaller than the midpoint.
+
+
+
+Programming Assignment:
+1.You and a friend have set a wager to see who can find the word "Albatross" in the dictionary the fastest. Write a program to allow you to win the bet.
+
+
+Binary search 
+FUNCTION binarySearch(dictionary, word){
+ var albatross = word.split('');
+ var low = dictionary[0];
+ var high = dictionary[25];
+ var mid = (low + high)/2
+ while low <=high{
+    for (var i=0; i<albatross.length; i++{
+        if(dictionary[mid] > albatross[i]){
+        high = mid -1;
+        }
+        else if(dictionary[mid] < albatross[i]){
+        low = mid+1;
+        }
+        else{
+        return mid;
+        }
+      }
+     return "Not Found";
+   }
+ } 
+
+
+2.You work at a pet store, and a child has asked you to net the only white-spotted goldfish from the fish tank. Write a program that will help you net the right fish.
+
+
+linear search
+
+var linearSearch = function(allFish, whiteSpot) {
+   var result = null, value;
+   for(var i = 0; i < allFish.length; i++) {
+     value = allFish[i];
+     if(value === whiteSpot){
+       result = i;
+       break;
+     }
+   }
+   return result;
+ };
